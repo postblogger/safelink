@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>&lt;!--/**
+*
+* Created By Anas RAR
+* NihLink v2.6.5
+* Author : Anas RAR
+* Date	 : 10 April 2019
+* URL 	 : postkomik.github.io
+* Repository : https://github.com/anasrar/NihLink-Safelink-Template-Blogger
+* License : https://github.com/anasrar/NihLink-Safelink-Template-Blogger/blob/master/LICENSE
+*
+*/<head>--&gt;<b:include name='body'/>&lt;head&gt;
+
+<meta content='width=device-width, initial-scale=1, user-scalable=yes, maximum-scale=1' name='viewport'/>
+<b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+  <title>Page Not Found - <data:blog.title/></title>
+<b:else/>
+  <title><data:view.title.escaped/></title>
+</b:if>
+<b:include data='blog' name='all-head-content'/>
+
+<link crossorigin='anonymous' href='//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'/>
+<link href='//use.fontawesome.com/releases/v5.0.10/css/all.css' rel='stylesheet' type='text/css'/>
+<script src='//code.jquery.com/jquery-2.1.4.min.js' type='text/javascript'/>
+<script src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js'/>
+<script src='//cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js'/>
+
+<script type='text/javascript'>
+&quot;use strict&quot;;
+$(document).ready(function() {
+  (function(W,D){
+    W.asli_config = {
+      url: &#39;&#39;,
+      page: &#39;p/lanjut.html&#39;,
+      output: &#39;#output&#39;,
+      defaultkey: &#39;AnasRAR&#39;,
+      fixednavbar: false,
+      countdown: true,
+      timedown: 10,
+      lang: {
+        urlempty: &quot;URL can not empty&quot;,
+        convertsuccess: &quot;Convert URL success, copy url on box below&quot;,
+        validtext: &quot;HTTP, HTTPS, or WWW&quot;,
+        gourltext: &quot;coba di klik linknya pak&quot;,
+        nourl: &quot;nggapain pak ??, linknya nggak ada&quot;,
+        errorconvert: &quot;URL can not to convert&quot;,
+        emptypass: &quot;Password can not empty&quot;,
+        wrongpass: &quot;Password is incorrect&quot;,
+        countdowntext: &quot;Please Wait {{anascountdown}} Second&quot;
+      }
+    }
+    var xv = $(&#39;footer &gt; .d-table &gt; .d-table-row &gt; .d-table-cell &gt; .container &gt; .row &gt; .col-sm-7 &gt; a#naas&#39;);
+    if(xv.length){
+      W.validurlit = function (ur) {
+        return /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&amp;=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&amp;=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&amp;;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/.test(ur);
+      }
+      W.sUp = function(el) {
+        D.querySelector(el).parentNode.style.height = &#39;0&#39;;
+      }
+      W._GET = function(name, url) {
+        if (!url) url = location.href;
+        name = name.replace(/[\[]/,&quot;\\\[&quot;).replace(/[\]]/,&quot;\\\]&quot;);
+        var regexS = &quot;[\\?&amp;]&quot;+name+&quot;=([^&amp;#]*)&quot;;
+        var regex = new RegExp( regexS );
+        var results = regex.exec( url );
+        return results == null ? null : results[1];
+      }
+      xv.attr(&#39;href&#39;, &#39;//postkomik.github.io&#39;).text(&#39;postkomik&#39;);
+    } else {
+      location.href = &#39;//postkomik.github.io&#39;;
+    }
+  }(window,document));
+});
+</script>
+
+<b:skin version='1.0.0'><![CDATA[
+
+
+/* LAYOUT WIDGET */
+body#layout {width:100%}
+body#layout ul {display: none;}
+body#layout .layouthide {display:none}
+
+
+]]></b:skin>
+
+<b:template-skin><![CDATA[
+body#layout:before{content:"NihLink v2.6.5";position:absolute;top:33px;right:7px;z-index:1;padding:10px 20px;font-size:18px;font-family:sans-serif;color:#fff;background: #007bff}
+body#layout {background-color: #fff; border: 0}
+body#layout div.section {background-color: #fff}
+body#layout .add_widget a {color: #007bff}
+body#layout .row:after {content:'';clear:both;display:block}
+body#layout .isHideLayout {display:none;}
+body#layout .col-md-3 {float:left;width:30%;}
+body#layout .col-md-6 {float:left;width:40%;}
+body#layout #page-setting {background: #fffcf2}
+]]></b:template-skin>
+
+<style type='text/css'>
+	/* FIX */
+	.hidden{visibility:hidden;height:0;overflow:hidden;display:none}
+	.clear, .clearfix{clear:both}
+	.separator a {margin:initial!important;}
+	.separator a img{margin: 1em;}
+	.separator:nth-child(1) a img{margin:initial;margin-bottom:auto}
+
+	/* BODY */
+  * {
+    outline: none !important;
+  }
+	html, body {
+	  height: 100%;
+	}
+	a:hover {
+		text-decoration: none !important
+	}
+	.overflow-hidden {
+	  overflow: hidden;
+	}
+	.trans {
+	  -webkit-transition: all .5s ease-in-out;
+	  -moz-transition: all .5s ease-in-out;
+	  -ms-transition: all .5s ease-in-out;
+	  -o-transition: all .5s ease-in-out;
+	  transition: all .5s ease-in-out;
+	}
+	.hidding-smooth {
+	  position: relative;
+	  height: 6vh;
+	  overflow: hidden;
+	}
+	.hidding-smooth:after {
+	  -webkit-transition: ease 0.8s;
+	  -moz-transition: ease 0.8s;
+	  -ms-transition: ease 0.8s;
+	  -o-transition: ease 0.8s;
+	  transition: ease 0.8s;
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  content: &#39;&#39;;
+	  background: linear-gradient(180deg, transparent, white 70%);
+	  width: 100%;
+	  height: 5vh;
+	}
+	.hidding-smooth:hover:after {
+	  height: 1px;
+	}
+	#fullpage {
+	  min-height: 100%;
+	  margin: 0 0 -120px 0;
+	  padding: 0 0 120px 0;
+	}
+	footer.footer {
+	  height: 120px;
+	  background-color: #ffffff;
+	  border-top: 1px solid #dee2e6;
+	}
+	.sticky-top {
+	  top: calc(60px + 1rem)
+    }
+	@media (max-width: 767px) {
+    .order-custom {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1
+    }
+  }
+</style>
+
+&lt;!--</head>--&gt;&lt;/head&gt;
+&lt;body itemscope=&#39;itemscope&#39; itemtype=&#39;http://schema.org/WebPage&#39;&gt;
+
+<div id='fullpage'>
+  <div class='container-semifluid'>
+    <div class='holder'>
+      <nav class='navbar navbar-expand border-bottom bg-white py-2' data-type='fixednav'>
+        <div class='container'>
+          <a class='navbar-brand' expr:href='data:blog.homepageUrl'><data:blog.title/></a>
+          <button aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation' class='navbar-toggler' data-target='#navbarSupportedContent' data-toggle='collapse' type='button'>
+            <span class='navbar-toggler-icon'/>
+          </button>
+
+          <div class='collapse navbar-collapse justify-content-end' id='navbarSupportedContent'>
+            <ul class='navbar-nav ml-auto'>
+              <li class='nav-item dropdown'>
+                <a aria-expanded='false' aria-haspopup='true' class='nav-link dropdown-toggle px-0' data-toggle='dropdown' href='#' id='navbarDropdown' role='button'>
+                  Menu
+                </a>
+                <ul aria-labelledby='navbarDropdown' class='dropdown-menu dropdown-menu-right' itemprop='mainEntity' itemscope='itemscope' itemtype='http://schema.org/SiteNavigationElement'>
+                  <li class='dropdown-item'><a href='//github.com/postblogger' itemprop='url' title='Documentation'><span itemprop='name'>Documentation</span></a></li>
+                  <div class='dropdown-divider'/>
+                  <li class='dropdown-item'><a href='//postblogger.my.id' itemprop='url' title='My Blog'><span itemprop='name'>My Blog</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class='container py-3'>
+      <div id='isihalaman'>
+
+
+        <b:section class='page-setting' cond='!data:view.isPreview' id='page-setting' maxwidgets='1'>
+          <b:widget id='HTML696' locked='false' title='setting' type='HTML' version='2' visible='true'>
+            <b:widget-settings>
+              <b:widget-setting name='content'>url: &quot;&quot;,
+page: &quot;p/lanjut.html&quot;,
+output: &quot;#output&quot;,
+fixednavbar: true,
+countdown: true,
+timedown: 10,
+lang: {
+ urlempty: &quot;URL can not be empty&quot;,
+ convertsuccess: &quot;Convert URL success, copy url on box below&quot;,
+ validtext: &quot;HTTP, HTTPS, or WWW&quot;,
+ gourltext: &quot;Click here to go&quot;,
+ nourl: &quot;No URl here&quot;,
+ errorconvert: &quot;URL can not to convert&quot;,
+ emptypass: &quot;Password can not be empty&quot;,
+ wrongpass: &quot;Password is incorrect&quot;,
+ countdowntext: &quot;Please Wait {{anascountdown}} Second&quot;
+}</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+<script type='text/javascript'>
+  &quot;use strict&quot;;
+  $(document).ready(function() {
+    window.new_config = {
+      <data:content/>
+    }
+    window.config = $.extend(true, asli_config, new_config);
+  });
+</script>
+            </b:includable>
+          </b:widget>
+        </b:section>
+
+
+        <div class='row'>
+
+          <div class='col-12 col-md-3 mb-3'>
+            <b:section class='ads-left sticky-top' cond='!data:view.isPreview' id='ads-left' maxwidgets='1'>
+              <b:widget id='HTML602' locked='false' title='left-sidebar-ads' type='HTML' version='2' visible='true'>
+                <b:widget-settings>
+                  <b:widget-setting name='content'><![CDATA[<img src="//dummyimage.com/700x700/ccc/777.png&text=+++ADS+++" alt="text=ads" title="ads" class="d-block w-100 mb-3" /><img src="//dummyimage.com/700x700/ccc/777.png&text=+++ADS+++" alt="text=ads" title="ads" class="d-block w-100 mb-3" />]]></b:widget-setting>
+                </b:widget-settings>
+                <b:includable id='main'>
+      						<b:if cond='data:view.isSingleItem'>
+      							<data:content/>
+      						</b:if>
+      					</b:includable>
+              </b:widget>
+            </b:section>
+          </div>
+
+
+          <div class='col-12 col-md-6 pb-3'>
+
+
+            <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+              <div class='text-center' style='font-size: 7vw'>Oppss...</div>
+              <div class='text-center' style='font-size: 3vw'>Page not found</div>
+            </b:if>
+
+
+            <b:if cond='data:view.isSingleItem'>
+              <script type='text/javascript'>
+                &quot;use strict&quot;;
+
+if (!String.prototype.startsWith) {
+    Object.defineProperty(String.prototype, &#39;startsWith&#39;, {
+        value: function(search, pos) {
+            pos = !pos || pos &lt; 0 ? 0 : +pos;
+            return this.substring(pos, pos + search.length) === search;
+        }
+    });
+}
+
+                $(document).ready(function(){
+                  $(document).on(&#39;submit&#39;, &#39;#locked&#39;, function(e) {
+                    e.preventDefault();
+                    var $this = $(this),
+                    parent = $this.parent(),
+                    report = parent.find(&#39;#report&#39;),
+                    passin = $(&#39;#passin&#39;);
+
+					var data;
+                    try {
+          			  data = JSON.parse(CryptoJS.AES.decrypt(decodeURIComponent(_GET(&#39;u&#39;)), passin[0].value).toString(CryptoJS.enc.Utf8));
+      				} catch (e) {
+                      data = false;
+                  	}
+
+                    if (passin[0].value.length) {
+                      if (typeof(data) === &quot;object&quot;) {
+						if(!data.countdown){
+                          report[0].innerHTML = &#39;&lt;div class=&quot;text-center&quot;&gt;&lt;a href=&quot;&#39;+(data.url.toLowerCase().startsWith(&#39;www.&#39;) ? &#39;//&#39; : &#39;&#39;)+&#39;&#39;+data.url+&#39;&quot;&gt;&#39;+config.lang.gourltext+&#39;&lt;/a&gt;&lt;/div&gt;&#39;;
+                          $this.find(&#39;button, input&#39;).attr(&#39;disabled&#39;, &#39;disabled&#39;);
+                          $this.slideUp(&#39;slow&#39;);
+						} else {
+                          $this.find(&#39;button, input&#39;).attr(&#39;disabled&#39;, &#39;disabled&#39;);
+                          $this.slideUp(&#39;slow&#39;);
+                          var timeleft = config.timedown;
+						  var MuANasRAR = setInterval(function(){
+                            var ANasRMunDurin = config.lang.countdowntext.replace(&#39;\x7b\x7b\x61\x6e\x61\x73\x63\x6f\x75\x6e\x74\x64\x6f\x77\x6e\x7d\x7d&#39;, timeleft);
+                            report[0].innerHTML = &#39;&lt;div class=&quot;border p-3 text-center&quot;&gt;&#39; + ANasRMunDurin + &#39;&lt;/div&gt;&#39;;
+							setTimeout(function(){
+                        	  report[0].parentNode.style.height = report[0].offsetHeight+&#39;px&#39;;
+                      	    }, 0);
+                            timeleft -= 1;
+                            if(timeleft &lt;= 0){
+                              clearInterval(MuANasRAR);
+                              report[0].innerHTML = &#39;&lt;div class=&quot;text-center&quot;&gt;&lt;a href=&quot;&#39;+(data.url.toLowerCase().startsWith(&#39;www.&#39;) ? &#39;//&#39; : &#39;&#39;)+&#39;&#39;+data.url+&#39;&quot;&gt;&#39;+config.lang.gourltext+&#39;&lt;/a&gt;&lt;/div&gt;&#39;;
+                            }
+                          }, 1000);
+						}
+                      } else {
+                        report[0].innerHTML = &#39;&lt;div class=&quot;alert alert-danger text-center&quot;&gt;&#39;+config.lang.wrongpass+&#39;&lt;/div&gt;&#39;;
+                      }
+                    } else {
+                      report[0].innerHTML = &#39;&lt;div class=&quot;alert alert-danger text-center&quot;&gt;&#39;+config.lang.emptypass+&#39;&lt;/div&gt;&#39;;
+                    }
+
+                    setTimeout(function(){
+                      report[0].parentNode.style.height = report[0].offsetHeight+&#39;px&#39;;
+                    }, 0);
+                  });
+
+
+                  if (_GET(&#39;u&#39;) &amp;&amp; $(config.output).length) {
+
+					var data;
+                    try {
+          			  data = JSON.parse(CryptoJS.AES.decrypt(decodeURIComponent(_GET(&#39;u&#39;)), config.defaultkey).toString(CryptoJS.enc.Utf8));
+      				} catch (e) {
+                      data = false;
+                  	}
+
+                    if (typeof(data) === &quot;object&quot;) {
+                      if(!data.countdown){
+                      	$(config.output)[0].innerHTML = &#39;&lt;div class=&quot;text-center&quot;&gt;&lt;a class=&quot;text-center&quot; href=&quot;&#39;+(data.url.toLowerCase().startsWith(&#39;www.&#39;) ? &#39;//&#39; : &#39;&#39;)+&#39;&#39;+data.url+&#39;&quot;&gt;&#39;+config.lang.gourltext+&#39;&lt;/a&gt;&lt;/div&gt;&#39;;
+                      } else {
+                        var timeleft = config.timedown;
+                        var MuANasRAR = setInterval(function(){
+                          var ANasRMunDurin = config.lang.countdowntext.replace(&#39;\x7b\x7b\x61\x6e\x61\x73\x63\x6f\x75\x6e\x74\x64\x6f\x77\x6e\x7d\x7d&#39;, timeleft);
+                          $(config.output)[0].innerHTML = &#39;&lt;div class=&quot;border p-3 text-center&quot;&gt;&#39; + ANasRMunDurin + &#39;&lt;/div&gt;&#39;;
+                          timeleft -= 1;
+                          if(timeleft &lt;= 0){
+                            clearInterval(MuANasRAR);
+                            $(config.output)[0].innerHTML = &#39;&lt;div class=&quot;text-center&quot;&gt;&lt;a class=&quot;text-center&quot; href=&quot;&#39;+(data.url.toLowerCase().startsWith(&#39;www.&#39;) ? &#39;//&#39; : &#39;&#39;)+&#39;&#39;+data.url+&#39;&quot;&gt;&#39;+config.lang.gourltext+&#39;&lt;/a&gt;&lt;/div&gt;&#39;;
+                          }
+                        }, 1000);
+                      }
+                    } else {
+                      $(config.output)[0].innerHTML = &#39;&lt;form class=&quot;form-group&quot; id=&quot;locked&quot;&gt;&lt;div class=&quot;input-group&quot;&gt;&lt;div class=&quot;input-group-prepend&quot;&gt;&lt;span class=&quot;input-group-text&quot;&gt;&lt;i class=&quot;fas fa-lock fa-fw&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;input class=&quot;form-control&quot; name=&quot;pass&quot; type=&quot;password&quot; id=&quot;passin&quot; onclick=&quot;sUp(\&#39;#report\&#39;)&quot; onkeypress=&quot;sUp(\&#39;#report\&#39;)&quot; aria-label=&quot;Password&quot; /&gt;&lt;div class=&quot;input-group-append&quot;&gt;&lt;button class=&quot;btn btn-primary&quot; type=&quot;submit&quot;&gt;Unlock&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/form&gt;&lt;section class=&quot;trans&quot; style=&quot;overflow: hidden;height: 0&quot;&gt;&lt;div id=&quot;report&quot;&gt;&lt;/div&gt;&lt;/section&gt;&#39;;
+                    }
+                  } else {
+                    if($(config.output).length){
+                      $(config.output)[0].innerHTML = &#39;&lt;div class=&quot;text-center&quot;&gt;&#39;+config.lang.nourl+&#39;&lt;/div&gt;&#39;;
+                    } else {
+                      console.log(&#39;Not found output element, are you sure you this is not safelink page ??&#39;);
+                    }
+                  }
+                });
+              </script>
+            </b:if>
+
+            <b:if cond='data:view.isMultipleItems'>
+
+              <section>
+                <form autocomplete='off' class='form-group' id='safelink'>
+                  <div class='input-group mb-0'>
+                    <div class='input-group-prepend'>
+                      <span class='input-group-text'><i class='fas fa-link fa-fw'/></span>
+                    </div>
+                    <input class='form-control' id='urlinput' onclick='sUp(&apos;#result&apos;)' onkeypress='sUp(&apos;#result&apos;)' placeholder='HTTP, HTTPS, or WWW' type='text'/>
+                    <div class='input-group-append'>
+                      <button class='btn btn-primary' type='submit'>Convert</button>
+                    </div>
+                  </div>
+                </form>
+              </section>
+
+              <section>
+                <div class='row mb-2'>
+                  <div class='col-3'>
+                    <button class='btn btn-dark btn-block' id='passbtn' onclick='sUp(&apos;#result&apos;)'>Password</button>
+                  </div>
+                  <div class='col-9'>
+                    <div class='input-group mb-0'>
+                      <div class='input-group-prepend'>
+                        <span class='input-group-text'><i class='fas fa-lock fa-fw'/></span>
+                      </div>
+                      <input class='form-control' disabled='disabled' id='passinput' onclick='sUp(&apos;#result&apos;)' onkeypress='sUp(&apos;#result&apos;)' type='text'/>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class='mb-3'>
+                <div class='d-inline-block custom-control custom-switch mr-3'>
+                  <input class='custom-control-input' id='randPost' onclick='sUp(&apos;#result&apos;)' type='checkbox'/>
+                  <label class='custom-control-label' for='randPost' onclick='sUp(&apos;#result&apos;)'>Random Post</label>
+                </div>
+                <div class='d-inline-block custom-control custom-switch'>
+                  <input class='custom-control-input' id='countDown' onclick='sUp(&apos;#result&apos;)' type='checkbox'/>
+                  <label class='custom-control-label' for='countDown' onclick='sUp(&apos;#result&apos;)'>Countdown</label>
+                </div>
+              </section>
+
+              <section class='trans' style='overflow: hidden;height: 0'>
+                <div id='result'/>
+              </section>
+
+              <section class='layouthide'>
+                <div class='row text-center mb-3' style='margin-top:20%'>
+                  <div class='col-12 col-sm-4'>
+                    <div style='height: 60px; overflow: hidden'>
+                      <i class='fas fa-eye fa-fw fa-3x'/>
+                    </div>
+                    <h5>Encrypt</h5>
+                    <p>Make your url unreadable and no one can bypass</p>
+                  </div>
+                  <div class='col-12 col-sm-4'>
+                    <div style='height: 60px; overflow: hidden'>
+                      <i class='fas fa-lock fa-fw fa-3x'/>
+                    </div>
+                    <h5>Password</h5>
+                    <p>Set a password to protect your links from unauthorized access</p>
+                  </div>
+                  <div class='col-12 col-sm-4'>
+                    <div style='height: 60px; overflow: hidden'>
+                      <i class='fas fa-cogs fa-fw fa-3x'/>
+                    </div>
+                    <h5>Setting</h5>
+                      <p>Easy to setting without need to know programming language</p>
+                    </div>
+                  </div>
+              </section>
+
+              <script type='text/javascript'>
+              &quot;use strict&quot;;
+                $(document).ready(function() {
+
+                  config.countdown ? $(&#39;#countDown&#39;).prop(&#39;checked&#39;, true) : $(&#39;#countDown&#39;).prop(&#39;checked&#39;, false) ;
+
+                  $(&#39;#passbtn&#39;).on(&#39;click&#39;, function(e) {
+                    var $this = $(this);
+                      if($this.hasClass(&#39;btn-dark&#39;)){
+                        $this.removeClass(&#39;btn-dark&#39;).addClass(&#39;btn-primary&#39;);
+                        $(&#39;#passinput&#39;).removeAttr(&#39;disabled&#39;);
+                      } else {
+                        $this.removeClass(&#39;btn-success&#39;).addClass(&#39;btn-dark&#39;);
+                        $(&#39;#passinput&#39;).attr(&#39;disabled&#39;, &#39;disabled&#39;)[0].value = &#39;&#39;;
+                      }
+                    e.preventDefault();
+                  });
+
+                  $(&#39;#safelink&#39;).on(&#39;submit&#39;, function(e) {
+                    e.preventDefault();
+                    var $this = $(this),
+                    passinput = $(&#39;#passinput&#39;)[0],
+                    keyit = passinput.value.length ? passinput.value : config.defaultkey,
+                    blog = config.url.length ? config.url : window.location.protocol + &quot;//&quot; + window.location.hostname,
+                    url = $this.find(&#39;#urlinput&#39;)[0],
+                    randPost = $(&#39;#randPost&#39;)[0],
+                    result = $(&#39;#result&#39;)[0],
+                    data = {};
+                    data.url = url.value,
+                    data.countdown = $(&#39;#countDown&#39;)[0].checked;
+
+                    if (url.value.length) {
+                      if (randPost.checked) {
+                        if (validurlit(url.value)) {
+                          $.ajax({
+                            url: &#39;/feeds/posts/summary?alt=json&amp;max-results=99&#39;,
+                            type: &#39;GET&#39;,
+                            dataType: &#39;json&#39;,
+                            cache: true,
+                            beforeSend: function() {
+                              result.innerHTML = &#39;&lt;div class=&quot;text-center&quot;&gt;&lt;span class=&quot;spinner-border spinner-border-sm text-primary&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Fetch Post&lt;/div&gt;&#39; ;
+                            },
+                            success: function(a){
+                              var post = a.feed.entry,
+                                  randNum = Math.floor(Math.random() * post.length),
+                                  linknya = &quot;&quot;;
+                              for(var i = 0; i &lt; post[randNum].link.length; i++){
+                                if(post[randNum].link[i].rel == &#39;alternate&#39;) {
+                                    linknya = post[randNum].link[i].href;
+                                  break;
+                                }
+                              }
+                              result.innerHTML = &#39;&lt;div class=&quot;alert alert-success text-center&quot;&gt;&#39;+config.lang.convertsuccess+&#39;&lt;/div&gt;&lt;div class=&quot;input-group mb-0&quot;&gt;&lt;div class=&quot;input-group-prepend&quot;&gt;&lt;span class=&quot;input-group-text&quot;&gt;&lt;i class=&quot;fas fa-copy fa-fw&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;input class=&quot;form-control&quot; onfocus=&quot;this.select()&quot; onmouseup=&quot;return false&quot; style=&quot;box-shadow: 0 0 0 0 transparent&quot; value=&quot;&#39;+linknya+&#39;?u=&#39;+encodeURIComponent(CryptoJS.AES.encrypt(JSON.stringify(data), keyit))+&#39;&quot;/&gt;&lt;/div&gt;&#39;;
+                              setTimeout(function(){
+                                result.parentNode.style.height = result.offsetHeight+&#39;px&#39;;
+                              }, 0);
+                            }
+                          });
+                          // result.innerHTML = &#39;&lt;div class=&quot;text-center&quot;&gt;&lt;span class=&quot;spinner-border spinner-border-sm text-primary&quot; role=&quot;status&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Fetch Post&lt;/div&gt;&#39; ;
+                        } else {
+                          result.innerHTML = &#39;&lt;div class=&quot;alert alert-warning text-center&quot;&gt;&#39;+config.lang.validtext+&#39;&lt;/div&gt;&#39; ;
+                        }
+                      } else {
+                        result.innerHTML = validurlit(url.value) ? &#39;&lt;div class=&quot;alert alert-success text-center&quot;&gt;&#39;+config.lang.convertsuccess+&#39;&lt;/div&gt;&lt;div class=&quot;input-group mb-0&quot;&gt;&lt;div class=&quot;input-group-prepend&quot;&gt;&lt;span class=&quot;input-group-text&quot;&gt;&lt;i class=&quot;fas fa-copy fa-fw&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;input class=&quot;form-control&quot; onfocus=&quot;this.select()&quot; onmouseup=&quot;return false&quot; style=&quot;box-shadow: 0 0 0 0 transparent&quot; value=&quot;&#39;+blog+&#39;/&#39;+config.page+&#39;?u=&#39;+encodeURIComponent(CryptoJS.AES.encrypt(JSON.stringify(data), keyit))+&#39;&quot;/&gt;&lt;/div&gt;&#39; : &#39;&lt;div class=&quot;alert alert-warning text-center&quot;&gt;&#39;+config.lang.validtext+&#39;&lt;/div&gt;&#39; ;
+                      }
+                    } else {
+                      result.innerHTML = &#39;&lt;div class=&quot;alert alert-danger text-center&quot;&gt;&#39;+config.lang.urlempty+&#39;&lt;/div&gt;&#39;;
+                    }
+
+
+                    setTimeout(function(){
+                      result.parentNode.style.height = result.offsetHeight+&#39;px&#39;;
+                    }, 0);
+                  });
+
+                });
+              </script>
+            </b:if>
+
+            <b:section id='page-is' maxwidgets='1' showaddelement='no'>
+              <b:widget cond='data:view.isSingleItem' id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
+                <b:widget-settings>
+                  <b:widget-setting name='commentLabel'>Comment</b:widget-setting>
+                  <b:widget-setting name='showShareButtons'>true</b:widget-setting>
+                  <b:widget-setting name='disableGooglePlusShare'>true</b:widget-setting>
+                  <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
+                  <b:widget-setting name='timestampLabel'>-</b:widget-setting>
+                  <b:widget-setting name='reactionsLabel'>Reaction</b:widget-setting>
+                  <b:widget-setting name='showAuthorProfile'>true</b:widget-setting>
+                  <b:widget-setting name='style.layout'>1x1</b:widget-setting>
+                  <b:widget-setting name='showLocation'>false</b:widget-setting>
+                  <b:widget-setting name='showTimestamp'>true</b:widget-setting>
+                  <b:widget-setting name='postsPerAd'>1</b:widget-setting>
+                  <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
+                  <b:widget-setting name='showDateHeader'>false</b:widget-setting>
+                  <b:widget-setting name='style.textcolor'>#000000</b:widget-setting>
+                  <b:widget-setting name='showCommentLink'>true</b:widget-setting>
+                  <b:widget-setting name='style.urlcolor'>#008000</b:widget-setting>
+                  <b:widget-setting name='postLocationLabel'>Location</b:widget-setting>
+                  <b:widget-setting name='showAuthor'>true</b:widget-setting>
+                  <b:widget-setting name='style.linkcolor'>#0000ff</b:widget-setting>
+                  <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+                  <b:widget-setting name='showLabels'>true</b:widget-setting>
+                  <b:widget-setting name='postLabelsLabel'>Labels</b:widget-setting>
+                  <b:widget-setting name='showBacklinks'>true</b:widget-setting>
+                  <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+                  <b:widget-setting name='showReactions'>true</b:widget-setting>
+                </b:widget-settings>
+                <b:includable id='main' var='this'>
+                  <b:comment>var=&#39;this&#39; digunakan untuk mengirim setiap data allBylineItems agar bisa terbaca</b:comment>
+
+             	    <b:loop values='data:posts' var='post'>
+            		    <b:include name='article.loop'/>
+            	    </b:loop>
+
+                </b:includable>
+                <b:includable id='aboutPostAuthor'/>
+                <b:includable id='addComments'/>
+                <b:includable id='article.loop'>
+                  <b:if cond='data:view.isMultipleItems'>
+
+                    <article expr:class='&quot;content index post-&quot; + data:post.id + &quot; blog&quot;' id='content-card' itemscope='itemscope' itemtype='https://schema.org/BlogPosting'>
+            	         <b:include name='article.loop.index'/>
+                     </article>
+
+                  <b:else/>
+
+                    <main aria-label='Main content' class='content post' itemscope='itemscope' itemtype='https://schema.org/Blog'>
+            	         <article expr:class='&quot;post-&quot; + data:post.id + &quot; blog&quot;' itemprop='blogPost' itemscope='itemscope' itemtype='https://schema.org/BlogPosting'>
+            		           <b:include name='article.loop.post'/>
+            	         </article>
+                    </main>
+                  </b:if>
+                </b:includable>
+                <b:includable id='article.loop.index'>
+
+            <div class='thumbnail'>
+            <img class='trans'>
+            <b:attr expr:value='data:post.title ? data:post.title : data:messages.image' name='alt'/>
+            <b:attr expr:value='data:post.title ? data:post.title : data:messages.image' name='title'/>
+            <b:if cond='data:post.featuredImage'>
+            <b:attr expr:value='resizeImage(data:post.featuredImage, 240)' name='src'/>
+            <b:else/>
+            <b:attr name='src' value='https://placehold.it/750x440/4a138c/fff?text=NO+THUMBNAIL'/>
+            </b:if>
+            </img>
+            </div>
+            <a class='btn' expr:href='data:post.link ? data:post.link : data:post.url' expr:title='data:post.title ? data:post.title : data:messages.noTitle'/>
+            <h3>
+            	<a expr:href='data:post.link ? data:post.link : data:post.url' expr:title='data:post.title ? data:post.title : data:messages.noTitle'>
+            		<b:eval expr='data:post.title ? data:post.title snippet { length: 5, links: false, linebreaks: false, ellipsis: true } : data:messages.noTitle'/>
+            	</a>
+            </h3>
+            <div class='deskripsi'><b:eval expr='data:post.snippets.long snippet { length: 100, links: false, linebreaks: false, ellipsis: true }'/></div>
+
+            </b:includable>
+                <b:includable id='article.loop.post'>
+
+            <div class='post-body' itemprop='articleBody'>
+              <h3 class='text-center'><data:post.title/></h3>
+            	<data:post.body/>
+            </div>
+
+            </b:includable>
+                <b:includable id='article.pagination'>
+            <b:if cond='not data:view.isSingleItem'>
+            <b:if cond='data:olderPageUrl'>
+            <div class='col-sm-12 col-xs-12'>
+            <div id='linkloadmore'>
+            	<a expr:href='data:olderPageUrl' expr:id='data:widget.instanceId + &quot;_pagination-old&quot;' expr:title='data:messages.olderPosts' itemprop='url'>
+            		<span itemprop='name'>Next Page</span>
+            	</a>
+            </div>
+            </div>
+            </b:if>
+            </b:if>
+            </b:includable>
+                <b:includable id='commentAuthorAvatar'/>
+                <b:includable id='commentDeleteIcon'/>
+                <b:includable id='commentForm'/>
+                <b:includable id='commentFormIframeSrc'/>
+                <b:includable id='commentItem'/>
+                <b:includable id='commentList'/>
+                <b:includable id='commentPicker'/>
+                <b:includable id='comments'/>
+                <b:includable id='commentsTitle'/>
+                <b:includable id='feedLinks'/>
+                <b:includable id='feedLinksBody'/>
+                <b:includable id='homePageLink'/>
+                <b:includable id='iframeComments'/>
+                <b:includable id='inlineAd'/>
+                <b:includable id='nextPageLink'/>
+                <b:includable id='post'/>
+                <b:includable id='postBody'/>
+                <b:includable id='postBodySnippet'/>
+                <b:includable id='postCommentsAndAd'/>
+                <b:includable id='postCommentsLink'/>
+                <b:includable id='postFooter'/>
+                <b:includable id='postFooterAuthorProfile'/>
+                <b:includable id='postHeader'/>
+                <b:includable id='postJumpLink'/>
+                <b:includable id='postMeta'/>
+                <b:includable id='postPagination'/>
+                <b:includable id='postTitle'/>
+                <b:includable id='previousPageLink'/>
+                <b:includable id='status-message'/>
+                <b:includable id='threadedCommentForm'/>
+                <b:includable id='threadedCommentJs'/>
+                <b:includable id='threadedComments'/>
+              </b:widget>
+            </b:section>
+
+            <b:section cond='false' id='reset'/>
+
+          </div>
+
+
+          <div class='col-12 col-md-3 order-last mb-3'>
+            <b:section class='ads-right sticky-top' cond='!data:view.isPreview' id='ads-right' maxwidgets='1'>
+              <b:widget id='HTML704' locked='false' title='right-sidebar-ads' type='HTML' version='2' visible='true'>
+                <b:widget-settings>
+                  <b:widget-setting name='content'><![CDATA[<img src="//dummyimage.com/700x700/ccc/777.png&text=+++ADS+++" alt="text=ads" title="ads" class="d-block w-100 mb-3" /><img src="//dummyimage.com/700x700/ccc/777.png&text=+++ADS+++" alt="text=ads" title="ads" class="d-block w-100 mb-3" />]]></b:widget-setting>
+                </b:widget-settings>
+                <b:includable id='main'>
+          				<b:if cond='data:view.isSingleItem'>
+          					<data:content/>
+          				</b:if>
+          			</b:includable>
+              </b:widget>
+            </b:section>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class='footer'>
+  <div class='d-table w-100' style='height:100%'>
+    <div class='d-table-row'>
+      <div class='d-table-cell align-middle'>
+        <div class='container'>
+          <div class='row'>
+            <div class='col-sm-5'>
+              &#169; 2019 <a expr:href='data:blog.homepageUrl' expr:title='data:blog.title'><span expr:title='data:blog.title'><data:blog.title/></span></a> All Right Reserved
+            </div>
+            <div class='col-sm-7 text-right'>
+              Created By <a href='//postkomik.github.io' id='naas' title='postkomik'>postkomik</a>
+              <!-- Please Dont Remove Or Change My Link  -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type='text/javascript'>
+  $(document).ready(function() {
+    if (config.fixednavbar) {
+      var navbar = $(&#39;.navbar&#39;), placeholder = navbar.parent();
+      $(window).on(&#39;resize load&#39;, function(){
+        navbar.css({position: &#39;fixed&#39;, width: placeholder.outerWidth()+&#39;px&#39;, zIndex: &#39;9999999&#39;});
+        placeholder.css({height: navbar.outerHeight()+&#39;px&#39;});
+      });
+    }
+  });
+</script>
+
+<b:defaultmarkups><b:defaultmarkup type='Common'><b:includable id='body'><b:if cond='data:view.isPreview'><body/><b:else/>&lt;!--<body/>--&gt;</b:if></b:includable></b:defaultmarkup></b:defaultmarkups>&lt;/body&gt;
+</html>
