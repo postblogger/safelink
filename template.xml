@@ -2,13 +2,11 @@
 <!DOCTYPE html>
 <html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>&lt;!--/**
 *
-* Created By postkomik
+* Created By Melynesky
 * safelink blogger 1.6.5
-* Author : postkomik
-* Date	 : 4 maret 2021
-* URL 	 : postkomik.github.io
-* Repository : https://github.com/postblogger/safelink
-* 
+* Author :Kai Melyne
+* Date	 : 30 Agustus 2021
+* URL 	 : https://www.instagram.com/dkorm_/
 *
 */<head>--&gt;<b:include name='body'/>&lt;head&gt;
 
@@ -691,7 +689,7 @@ if (!String.prototype.startsWith) {
               &#169; 2019 <a expr:href='data:blog.homepageUrl' expr:title='data:blog.title'><span expr:title='data:blog.title'><data:blog.title/></span></a> All Right Reserved
             </div>
             <div class='col-sm-7 text-right'>
-              Created By <a href='//postkomik.github.io' id='naas' title='postkomik'>postkomik</a>
+              Created By <a href=https://www.instagram.com/dkorm_/>Melynesky</a>
               <!-- Please Dont Remove Or Change My Link  -->
             </div>
           </div>
